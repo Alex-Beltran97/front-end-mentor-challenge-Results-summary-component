@@ -182,7 +182,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 1.4rem;
-    width: 560px;
+    width: 480px;
     min-height: 240px;
     box-shadow: 16px 16px 56px lightgray;
     border-radius: 12px;
@@ -199,5 +199,11 @@ main {
   
   .summary-content {
     width: 240px;
+  }
+}
+
+@media (min-height: 360px) {
+  .result {
+    height: 80vh;
   }
 }
