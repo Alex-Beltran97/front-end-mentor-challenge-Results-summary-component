@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Results summary component</title>
+  <link rel="stylesheet" href="./src/styles/index.css">
+</head>
+<body>
+  <main>
+    <section class="result">
+      <h3 class="result-item result-title">Your Result</h3>      
+      <div class="result-item result-value">
+        <h1>76</h1>
+        <p>of 100</p>
+      </div>
+    
+      <h2 class="result-item result-msg">Great</h2>
+      <p class="result-item result-txt">You scored higher than 65% of the people who have taken these tests.</p>
+    </section>
+    
+    <section class="summary-content">
+      <div class="summary">
+        <h3 class="summary-title">Summary</h3>      
+      </div>
+      <Button class="btn-continue">Continue</Button>
+    </section>  
+  </main>  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </foot>
+
+  <!-- templates -->
+  <template id="template-summary-item">
+    <div class="summary-item">
+      <h4 class="summary-label">
+        <img class="img" src="#" alt="#" />
+        <p class="summary-label-value">Value</p>        
+      </h4>      
+      <span class="summary-pertentage">
+        <span class="percentage">
+          0
+        </span>
+        / 100
+      </span>
+    </div>
+  </template>
+
+  <script src="./src/app.js" type="module"></script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'font-challenge';
+  src: local("Hanken Grotesk"), url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --f-size: 18px;
+  --width: 100%;
+  --height: 100vh;
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --gr-light-slate-blue-bg: hsl(252, 100%, 67%);
+  --gr-light-royal-blue-bg: hsl(241, 81%, 54%);
+  --gr-violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --gr-persian-blue-circle: hsla(241, 72%, 46%, 0);
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-pale-blue: hsl(221, 100%, 96%);
+  --neutral-light-lavender: hsl(241, 100%, 89%);
+  --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+  font-size: var(--f-size);
+  width: var(--width);
+  height: var(--height);
+  font-family: "font-challenge";  
+}
+
+/* main */
+
+main {
+  width: var(--width);
+  min-height: var(--height);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* Result container */
+
+.result {
+  color: rgb(225,225,225);
+  text-align: center;
+  background-image: linear-gradient(180deg, var(--gr-light-slate-blue-bg), var(--gr-light-royal-blue-bg));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+}
+
+.result-item {
+  margin: 0.5em;
+}
+
+.result-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background-color: var(--gr-light-royal-blue-bg);
+  font-size: 1.5rem;
+}
+
+.result-value > p {
+  font-size: 1rem;
+}
+
+
+/* Summary */
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.summary {
+  width: var(--width);
+  min-height: 48vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.summary .summary-title {
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.summary .summary-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary .summary-item {
+  margin: 0 0.5rem;
+  background-color: #f1eaeafd;
+  padding: 0.5rem;
+  display: inline-flex;  
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
+.summary .summary-item:nth-of-type(1) .summary-label {
+  color: var(--light-red);
+}
+
+.summary .summary-item:nth-of-type(2) .summary-label {
+  color: var(--orangey-yellow);
+}
+
+.summary .summary-item:nth-of-type(3) .summary-label {
+  color: var(--green-teal);
+}
+
+.summary .summary-item:nth-of-type(4) .summary-label {
+  color: var(--cobalt-blue);
+}
+
+.summary .summary-item .summary-pertentage .percentage {
+  font-weight: 700;
+}
+
+/* button */
+
+.btn-continue {
+  background-color: var(--neutral-dark-gray-blue);
+  color: rgb(225, 225, 225);
+  padding: 1rem;
+  border: none;
+  border-radius: 16px;
+  margin: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn-continue:hover {
+  transition: 0.5s;
+  background-color: var(--gr-violet-blue-circle);
+}
+
+/* footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* media queries */
+
+@media (min-width: 480px) {
+  :root {
+    --f-size: 16px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    width: 560px;
+    min-height: 240px;
+    box-shadow: 16px 16px 56px lightgray;
+    border-radius: 12px;
+  }
+  
+  .result {
+    width: 240px;
+    height: 58vh;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+  
+  .summary-content {
+    width: 240px;
+  }
+}
