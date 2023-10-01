@@ -190,7 +190,6 @@ main {
   
   .result {
     width: 240px;
-    height: 58vh;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
     border-bottom-left-radius: 5%;
@@ -199,11 +198,5 @@ main {
   
   .summary-content {
     width: 240px;
-  }
-}
-
-@media (min-height: 360px) {
-  .result {
-    height: 80vh;
   }
 }
